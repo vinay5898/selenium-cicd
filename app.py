@@ -6,7 +6,7 @@ class app_test_case(unittest.TestCase):
 
 
     def setUp(self):
-        chromeOptions = webdriver.op()
+        op = webdriver.ChromeOptions()
         driver_path = '/usr/local/bin/chromedriver'
         op.add_argument('--enable-extensions')
         op.add_argument('headless')
