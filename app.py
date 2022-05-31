@@ -13,7 +13,7 @@ class app_test_case(unittest.TestCase):
         options.add_argument('--no-sandbox')
 
 
-        self.driver = webdriver.Chrome(driver_path, chrome_options=chromeOptions)
+        self.driver = webdriver.Chrome(driver_path, chrome_options=options)
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
         path = 'https://www.facebook.com/'
