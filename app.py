@@ -6,7 +6,7 @@ class app_test_case(unittest.TestCase):
 
 
     def setUp(self):
-        chromeOptions = webdriver.ChromeOptions()
+        chromeOptions = webdriver.op()
         driver_path = '/usr/local/bin/chromedriver'
         op.add_argument('--enable-extensions')
         op.add_argument('headless')
@@ -15,7 +15,7 @@ class app_test_case(unittest.TestCase):
         op.add_argument('--disable-dev-shm-usage')
 
 
-        self.driver = webdriver.Chrome(driver_path, chrome_options=options)
+        self.driver = webdriver.Chrome(driver_path, chrome_options=op)
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
         path = 'https://www.facebook.com/'
